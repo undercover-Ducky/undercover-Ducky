@@ -11,13 +11,11 @@ jobs:
     name: Profile Readme Development Stats
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3  # Check out the repository
-      - uses: anmol098/waka-readme-stats@v4  # Action to update README with WakaTime stats
+      - name: Checkout repository
+        uses: actions/checkout@v3  # Ensures the repository is checked out
+        
+      - name: Update README with WakaTime stats
+        uses: anmol098/waka-readme-stats@v4
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          SHOW_LANGUAGE: true  # Show languages
-          SHOW_TOTAL_CODE_TIME: true  # Show total coding time (if this is supported)
-          SHOW_TIMEZONE: true  # Show timezone
-          SHOW_EDITORS: true  # Show editors
-          SHOW_PROJECTS: true  # Show projects
