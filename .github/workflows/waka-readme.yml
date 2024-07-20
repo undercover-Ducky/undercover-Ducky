@@ -5,12 +5,11 @@ on:
     # Runs at 12am IST
     - cron: '30 18 * * *'
   workflow_dispatch:
-
 jobs:
   update-readme:
-    name: Profile Readme Development Stats
     runs-on: ubuntu-latest
     steps:
+      - name: Profile Readme Development Stats      
       - uses: actions/checkout@v3  # Check out the repository
       - uses: anmol098/waka-readme-stats@v4  # Action to update README with WakaTime stats
         with:
