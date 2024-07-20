@@ -10,8 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Profile Readme Development Stats      
-      - uses: actions/checkout@v3  # Check out the repository
-      - uses: anmol098/waka-readme-stats@v4  # Action to update README with WakaTime stats
+        uses: anmol098/waka-readme-stats@v4  # Action to update README with WakaTime stats
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
