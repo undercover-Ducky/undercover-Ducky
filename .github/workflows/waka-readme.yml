@@ -11,7 +11,6 @@ jobs:
     name: Update Readme with Metrics
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2  # Check out the repository
       - uses: anmol098/waka-readme-stats@master  # Action to update README with WakaTime stats
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
