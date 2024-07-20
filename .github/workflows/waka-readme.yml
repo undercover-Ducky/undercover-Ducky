@@ -14,13 +14,3 @@ jobs:
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          SHOW_TITLE: true  # Optional: Show a title
-          SECTION_NAME: waka  # Optional: Name of the section
-          BLOCKS: languages,time,code  # Optional: Adjust blocks to show (languages, time, code)
-          CODE_LANG: csharp,c,blazor,powershell,html,css,javascript  # Optional: List of languages to focus on
-          TIME_RANGE: all_time  # Optional: Track all-time data
-          LANG_COUNT: 10  # Optional: Number of languages to show
-          SHOW_TIME: true  # Optional: Show time spent
-          SHOW_TOTAL: true  # Optional: Show total coding time
-          SHOW_MASKED_TIME: false  # Optional: Show masked time if any
-          STOP_AT_OTHER: true  # Optional: Stop at other languages
