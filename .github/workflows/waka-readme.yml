@@ -5,23 +5,22 @@ on:
     # Runs at 12am IST
     - cron: '30 18 * * *'
   workflow_dispatch:
+
 jobs:
   update-readme:
     name: Profile Readme Development Stats
-    runs-on: ubuntu-latest                      
+    runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3  # Check out the repository
       - uses: anmol098/waka-readme-stats@v4  # Action to update README with WakaTime stats
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          SHOW_TITLE: true  # Optional: Show a title
-          SECTION_NAME: waka  # Optional: Name of the section
-          BLOCKS: languages,time,code  # Optional: Adjust blocks to show (languages, time, code)
-          CODE_LANG: csharp,c,blazor,powershell,html,css,javascript  # Optional: List of languages to focus on
-          TIME_RANGE: all_time  # Optional: Track all-time data
-          LANG_COUNT: 10  # Optional: Number of languages to show
-          SHOW_TIME: true  # Optional: Show time spent
-          SHOW_TOTAL: true  # Optional: Show total coding time
-          SHOW_MASKED_TIME: false  # Optional: Show masked time if any
-          STOP_AT_OTHER: true  # Optional: Stop at other languages
-          SYMBOL_VERSION: 3
+          SECTION_NAME: waka  # Name of the section
+          SHOW_LANGUAGE: true  # Show languages
+          SHOW_TOTAL_CODE_TIME: true  # Show total coding time
+          SHOW_TIMEZONE: true  # Optional: Show timezone
+          SHOW_EDITORS: true  # Optional: Show editors
+          SHOW_PROJECTS: true  # Optional: Show projects
+          SYMBOL_VERSION: 3  # Optional: Symbol version
+          DEBUG_LOGGING: true  # Enable debugging (Optional)
